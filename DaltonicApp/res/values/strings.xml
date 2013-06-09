@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DaltonicApp!</string>
+    <color name="rojo">#FF0000</color>
+    <color name="blanco">#FFFFFF</color>
+
+    <string name="texto_creditos">
+		DaltonicApp! ha sido realizada por José Luis Jimenez Urbano como proyecto final del ciclo superior Desarrollo de Aplicaciones Multiplataforma. \n\n
+		Es una app para la ayuda a niños (también mayores) con Daltonismo o ceguera a ciertos colores.\n
+		Esta app no sustituye a la ayuda que un adulto pueda darle, a la hora de colorear, pero puede dar cierta libertad e independencia a los niños.\n\n
+		
+		DaltonicApp! está utilizando una librería para el tratamiento de imágenes computerizada.\n 
+		OpenCV (Open Source Computer Vision) cuenta con una licencia BSD OpenSource.\n  
+		
+		DaltonicApp! se distribuye bajo licencia Creative Commons Atribución-CompartirIgual 3.0 Unported. Es decir, se puede modificar, distribuir y comerciar siempre y cuando se distribuya de la misma forma.\n\n
+		
+		Puedes descargar el código de DaltonicApp! desde GitHub.\n 
+		https://www.github.com/url 
+    </string>
+</resources>

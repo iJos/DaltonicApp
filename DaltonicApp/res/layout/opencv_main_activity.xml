@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <org.opencv.android.NativeCameraView
+        android:id="@+id/camara_nativa"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        opencv:camera_id="any"
+        opencv:show_fps="true" />
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/camara_java"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        opencv:camera_id="any"
+        opencv:show_fps="true" />
+
+</RelativeLayout>

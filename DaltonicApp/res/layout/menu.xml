@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Iniciar"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="93dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/boton"
+            android:text="Iniciar"
+            android:textColor="#FFFFFF" />
+        
+       	<Button
+       	    android:id="@+id/Creditos"
+       	    android:layout_width="166dp"
+       	    android:layout_height="wrap_content"
+       	    android:layout_marginLeft="93dp"
+       	    android:layout_marginTop="5dp"
+       	    android:background="@drawable/boton"
+       	    android:text="Créditos"
+       	    android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

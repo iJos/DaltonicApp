@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.SurfaceView;
 import android.view.Window;
 import android.view.WindowManager;
@@ -36,6 +37,7 @@ public class OpenCVMainActivity extends Activity implements CvCameraViewListener
     private MenuItem             menuTipoCamara = null;
     private MenuItem			 menuBlancoYNegro = null;
     private MenuItem			 menuModoReconocimiento = null;
+    private MenuItem			 menuSubmenuResoluciones = null;
     private boolean              tipoCamara = true;
     private boolean				 modoGrises = false;
     private boolean				 modoReconocimiento = false; //Modo de reconocimiento colores. Preciso(true) o Rango(false). por defecto empezamos en preciso(true)
@@ -135,7 +137,12 @@ public class OpenCVMainActivity extends Activity implements CvCameraViewListener
         menuTipoCamara = menu.add("Cambiar Camara Nativa/Java");
         menuBlancoYNegro = menu.add("Blanco y Negro");
         menuModoReconocimiento = menu.add("Modo Preciso / Rango de Color");
-
+        
+        SubMenu subMenu = menu.addSubMenu(4, 4, 4, "Selecciona una resolución");
+        subMenu.add(1, 10, 1, "Alta Resolución (1280x720)");
+        subMenu.add(1, 11, 2, "Media Resolución (960x720)");
+        subMenu.add(1, 12, 3, "Baja Resolución (800x480)");
+        
         return true;
     }
     
@@ -194,6 +201,29 @@ public class OpenCVMainActivity extends Activity implements CvCameraViewListener
         	}
         }
         
+        
+        //Submenu para cambiar el tamaño del HUD
+        switch(item.getItemId()){
+            case 10: //Id del menú, para combrobar que se ha pulsado
+            	anchoCamara = 1280;
+            	altoCamara = 720;
+            	Toast toast = Toast.makeText(this, "Resolución del HUD máxima" , Toast.LENGTH_LONG);
+        		toast.show();
+                break;
+            case 11:
+            	anchoCamara = 960;
+            	altoCamara = 720;
+            	toast = Toast.makeText(this, "Resolución del HUD media" , Toast.LENGTH_LONG);
+        		toast.show();
+                break;
+            case 12:
+            	anchoCamara = 800;
+            	altoCamara = 480;
+            	toast = Toast.makeText(this, "Resolución del HUD mínima" , Toast.LENGTH_LONG);
+        		toast.show();
+                break;
+
+        }
 
         return true;
     }
